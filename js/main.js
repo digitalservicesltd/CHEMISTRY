@@ -298,3 +298,12 @@ document.addEventListener("DOMContentLoaded", () => {
   const main = document.querySelector(".fade-in");
   if (main) main.style.opacity = "1";
 });
+
+  if ('serviceWorker' in navigator) {
+    window.addEventListener('load', () => {
+      navigator.serviceWorker
+        .register('/CHEMISTRY/sw.js')
+        .then(reg => console.log('SW registered'))
+        .catch(err => console.log('SW error:', err));
+    });
+  }
