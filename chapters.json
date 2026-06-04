@@ -1,5 +1,5 @@
 ﻿{
-    "generated":  "2026-06-04T16:27:46",
+    "generated":  "2026-06-04T18:23:08",
     "subjects":  {
                      "chemistry":  {
                                        "name":  "Chemistry",
@@ -16,6 +16,41 @@
                                                                                        "chapter":  2,
                                                                                        "title":  "Structure of Atom",
                                                                                        "file":  "chemistry/11th/chapters/ch2.html"
+                                                                                   },
+                                                                                   {
+                                                                                       "chapter":  3,
+                                                                                       "title":  "Classification of Elements and Periodicity in Properties",
+                                                                                       "file":  "chemistry/11th/chapters/ch3.html"
+                                                                                   },
+                                                                                   {
+                                                                                       "chapter":  4,
+                                                                                       "title":  "Chemical Bonding and Molecular Structure",
+                                                                                       "file":  "chemistry/11th/chapters/ch4.html"
+                                                                                   },
+                                                                                   {
+                                                                                       "chapter":  5,
+                                                                                       "title":  "Thermodynamics",
+                                                                                       "file":  "chemistry/11th/chapters/ch5.html"
+                                                                                   },
+                                                                                   {
+                                                                                       "chapter":  6,
+                                                                                       "title":  "Equilibrium",
+                                                                                       "file":  "chemistry/11th/chapters/ch6.html"
+                                                                                   },
+                                                                                   {
+                                                                                       "chapter":  7,
+                                                                                       "title":  "Redox Reactions",
+                                                                                       "file":  "chemistry/11th/chapters/ch7.html"
+                                                                                   },
+                                                                                   {
+                                                                                       "chapter":  8,
+                                                                                       "title":  "Organic Chemistry - Some Basic Principles and Techniques",
+                                                                                       "file":  "chemistry/11th/chapters/ch8.html"
+                                                                                   },
+                                                                                   {
+                                                                                       "chapter":  9,
+                                                                                       "title":  "Hydrocarbons",
+                                                                                       "file":  "chemistry/11th/chapters/ch9.html"
                                                                                    }
                                                                                ]
                                                               },
@@ -25,10 +60,383 @@
                                                                                        "chapter":  1,
                                                                                        "title":  "The Solid State",
                                                                                        "file":  "chemistry/12th/chapters/ch1.html"
+                                                                                   },
+                                                                                   {
+                                                                                       "chapter":  2,
+                                                                                       "title":  "Solutions",
+                                                                                       "file":  "chemistry/12th/chapters/ch2.html"
+                                                                                   },
+                                                                                   {
+                                                                                       "chapter":  3,
+                                                                                       "title":  "Electrochemistry",
+                                                                                       "file":  "chemistry/12th/chapters/ch3.html"
+                                                                                   },
+                                                                                   {
+                                                                                       "chapter":  4,
+                                                                                       "title":  "Chemical Kinetics",
+                                                                                       "file":  "chemistry/12th/chapters/ch4.html"
+                                                                                   },
+                                                                                   {
+                                                                                       "chapter":  5,
+                                                                                       "title":  "Surface Chemistry",
+                                                                                       "file":  "chemistry/12th/chapters/ch5.html"
+                                                                                   },
+                                                                                   {
+                                                                                       "chapter":  6,
+                                                                                       "title":  "General Principles and Processes of Isolation of Elements",
+                                                                                       "file":  "chemistry/12th/chapters/ch6.html"
+                                                                                   },
+                                                                                   {
+                                                                                       "chapter":  7,
+                                                                                       "title":  "The p-Block Elements",
+                                                                                       "file":  "chemistry/12th/chapters/ch7.html"
+                                                                                   },
+                                                                                   {
+                                                                                       "chapter":  8,
+                                                                                       "title":  "The d- and f-Block Elements",
+                                                                                       "file":  "chemistry/12th/chapters/ch8.html"
+                                                                                   },
+                                                                                   {
+                                                                                       "chapter":  9,
+                                                                                       "title":  "Coordination Compounds",
+                                                                                       "file":  "chemistry/12th/chapters/ch9.html"
+                                                                                   },
+                                                                                   {
+                                                                                       "chapter":  10,
+                                                                                       "title":  "Haloalkanes and Haloarenes",
+                                                                                       "file":  "chemistry/12th/chapters/ch10.html"
+                                                                                   },
+                                                                                   {
+                                                                                       "chapter":  11,
+                                                                                       "title":  "Alcohols Phenols and Ethers",
+                                                                                       "file":  "chemistry/12th/chapters/ch11.html"
+                                                                                   },
+                                                                                   {
+                                                                                       "chapter":  12,
+                                                                                       "title":  "Aldehydes Ketones and Carboxylic Acids",
+                                                                                       "file":  "chemistry/12th/chapters/ch12.html"
+                                                                                   },
+                                                                                   {
+                                                                                       "chapter":  13,
+                                                                                       "title":  "Amines",
+                                                                                       "file":  "chemistry/12th/chapters/ch13.html"
+                                                                                   },
+                                                                                   {
+                                                                                       "chapter":  14,
+                                                                                       "title":  "Biomolecules",
+                                                                                       "file":  "chemistry/12th/chapters/ch14.html"
                                                                                    }
                                                                                ]
                                                               }
                                                    }
-                                   }
+                                   },
+                     "maths":  {
+                                   "name":  "Mathematics",
+                                   "color":  "#ab47bc",
+                                   "classes":  {
+                                                   "11":  {
+                                                              "chapters":  [
+                                                                               {
+                                                                                   "chapter":  1,
+                                                                                   "title":  "Sets",
+                                                                                   "file":  "maths/11th/chapters/ch1.html"
+                                                                               },
+                                                                               {
+                                                                                   "chapter":  2,
+                                                                                   "title":  "Relations and Functions",
+                                                                                   "file":  "maths/11th/chapters/ch2.html"
+                                                                               },
+                                                                               {
+                                                                                   "chapter":  3,
+                                                                                   "title":  "Trigonometric Functions",
+                                                                                   "file":  "maths/11th/chapters/ch3.html"
+                                                                               },
+                                                                               {
+                                                                                   "chapter":  4,
+                                                                                   "title":  "Complex Numbers and Quadratic Equations",
+                                                                                   "file":  "maths/11th/chapters/ch4.html"
+                                                                               },
+                                                                               {
+                                                                                   "chapter":  5,
+                                                                                   "title":  "Linear Inequalities",
+                                                                                   "file":  "maths/11th/chapters/ch5.html"
+                                                                               },
+                                                                               {
+                                                                                   "chapter":  6,
+                                                                                   "title":  "Permutations and Combinations",
+                                                                                   "file":  "maths/11th/chapters/ch6.html"
+                                                                               },
+                                                                               {
+                                                                                   "chapter":  7,
+                                                                                   "title":  "Binomial Theorem",
+                                                                                   "file":  "maths/11th/chapters/ch7.html"
+                                                                               },
+                                                                               {
+                                                                                   "chapter":  8,
+                                                                                   "title":  "Sequences and Series",
+                                                                                   "file":  "maths/11th/chapters/ch8.html"
+                                                                               },
+                                                                               {
+                                                                                   "chapter":  9,
+                                                                                   "title":  "Straight Lines",
+                                                                                   "file":  "maths/11th/chapters/ch9.html"
+                                                                               },
+                                                                               {
+                                                                                   "chapter":  10,
+                                                                                   "title":  "Conic Sections",
+                                                                                   "file":  "maths/11th/chapters/ch10.html"
+                                                                               },
+                                                                               {
+                                                                                   "chapter":  11,
+                                                                                   "title":  "Introduction to Three Dimensional Geometry",
+                                                                                   "file":  "maths/11th/chapters/ch11.html"
+                                                                               },
+                                                                               {
+                                                                                   "chapter":  12,
+                                                                                   "title":  "Limits and Derivatives",
+                                                                                   "file":  "maths/11th/chapters/ch12.html"
+                                                                               },
+                                                                               {
+                                                                                   "chapter":  13,
+                                                                                   "title":  "Statistics",
+                                                                                   "file":  "maths/11th/chapters/ch13.html"
+                                                                               },
+                                                                               {
+                                                                                   "chapter":  14,
+                                                                                   "title":  "Probability",
+                                                                                   "file":  "maths/11th/chapters/ch14.html"
+                                                                               }
+                                                                           ]
+                                                          },
+                                                   "12":  {
+                                                              "chapters":  [
+                                                                               {
+                                                                                   "chapter":  1,
+                                                                                   "title":  "Relations and Functions",
+                                                                                   "file":  "maths/12th/chapters/ch1.html"
+                                                                               },
+                                                                               {
+                                                                                   "chapter":  2,
+                                                                                   "title":  "Inverse Trigonometric Functions",
+                                                                                   "file":  "maths/12th/chapters/ch2.html"
+                                                                               },
+                                                                               {
+                                                                                   "chapter":  3,
+                                                                                   "title":  "Matrices",
+                                                                                   "file":  "maths/12th/chapters/ch3.html"
+                                                                               },
+                                                                               {
+                                                                                   "chapter":  4,
+                                                                                   "title":  "Determinants",
+                                                                                   "file":  "maths/12th/chapters/ch4.html"
+                                                                               },
+                                                                               {
+                                                                                   "chapter":  5,
+                                                                                   "title":  "Continuity and Differentiability",
+                                                                                   "file":  "maths/12th/chapters/ch5.html"
+                                                                               },
+                                                                               {
+                                                                                   "chapter":  6,
+                                                                                   "title":  "Application of Derivatives",
+                                                                                   "file":  "maths/12th/chapters/ch6.html"
+                                                                               },
+                                                                               {
+                                                                                   "chapter":  7,
+                                                                                   "title":  "Integrals",
+                                                                                   "file":  "maths/12th/chapters/ch7.html"
+                                                                               },
+                                                                               {
+                                                                                   "chapter":  8,
+                                                                                   "title":  "Application of Integrals",
+                                                                                   "file":  "maths/12th/chapters/ch8.html"
+                                                                               },
+                                                                               {
+                                                                                   "chapter":  9,
+                                                                                   "title":  "Differential Equations",
+                                                                                   "file":  "maths/12th/chapters/ch9.html"
+                                                                               },
+                                                                               {
+                                                                                   "chapter":  10,
+                                                                                   "title":  "Vector Algebra",
+                                                                                   "file":  "maths/12th/chapters/ch10.html"
+                                                                               },
+                                                                               {
+                                                                                   "chapter":  11,
+                                                                                   "title":  "Three Dimensional Geometry",
+                                                                                   "file":  "maths/12th/chapters/ch11.html"
+                                                                               },
+                                                                               {
+                                                                                   "chapter":  12,
+                                                                                   "title":  "Linear Programming",
+                                                                                   "file":  "maths/12th/chapters/ch12.html"
+                                                                               },
+                                                                               {
+                                                                                   "chapter":  13,
+                                                                                   "title":  "Probability",
+                                                                                   "file":  "maths/12th/chapters/ch13.html"
+                                                                               }
+                                                                           ]
+                                                          }
+                                               }
+                               },
+                     "physics":  {
+                                     "name":  "Physics",
+                                     "color":  "#ff9800",
+                                     "classes":  {
+                                                     "11":  {
+                                                                "chapters":  [
+                                                                                 {
+                                                                                     "chapter":  1,
+                                                                                     "title":  "Physical World",
+                                                                                     "file":  "physics/11th/chapters/ch1.html"
+                                                                                 },
+                                                                                 {
+                                                                                     "chapter":  2,
+                                                                                     "title":  "Units and Measurements",
+                                                                                     "file":  "physics/11th/chapters/ch2.html"
+                                                                                 },
+                                                                                 {
+                                                                                     "chapter":  3,
+                                                                                     "title":  "Motion in a Straight Line",
+                                                                                     "file":  "physics/11th/chapters/ch3.html"
+                                                                                 },
+                                                                                 {
+                                                                                     "chapter":  4,
+                                                                                     "title":  "Motion in a Plane",
+                                                                                     "file":  "physics/11th/chapters/ch4.html"
+                                                                                 },
+                                                                                 {
+                                                                                     "chapter":  5,
+                                                                                     "title":  "Laws of Motion",
+                                                                                     "file":  "physics/11th/chapters/ch5.html"
+                                                                                 },
+                                                                                 {
+                                                                                     "chapter":  6,
+                                                                                     "title":  "Work Energy and Power",
+                                                                                     "file":  "physics/11th/chapters/ch6.html"
+                                                                                 },
+                                                                                 {
+                                                                                     "chapter":  7,
+                                                                                     "title":  "System of Particles and Rotational Motion",
+                                                                                     "file":  "physics/11th/chapters/ch7.html"
+                                                                                 },
+                                                                                 {
+                                                                                     "chapter":  8,
+                                                                                     "title":  "Gravitation",
+                                                                                     "file":  "physics/11th/chapters/ch8.html"
+                                                                                 },
+                                                                                 {
+                                                                                     "chapter":  9,
+                                                                                     "title":  "Mechanical Properties of Solids",
+                                                                                     "file":  "physics/11th/chapters/ch9.html"
+                                                                                 },
+                                                                                 {
+                                                                                     "chapter":  10,
+                                                                                     "title":  "Mechanical Properties of Fluids",
+                                                                                     "file":  "physics/11th/chapters/ch10.html"
+                                                                                 },
+                                                                                 {
+                                                                                     "chapter":  11,
+                                                                                     "title":  "Thermal Properties of Matter",
+                                                                                     "file":  "physics/11th/chapters/ch11.html"
+                                                                                 },
+                                                                                 {
+                                                                                     "chapter":  12,
+                                                                                     "title":  "Thermodynamics",
+                                                                                     "file":  "physics/11th/chapters/ch12.html"
+                                                                                 },
+                                                                                 {
+                                                                                     "chapter":  13,
+                                                                                     "title":  "Kinetic Theory",
+                                                                                     "file":  "physics/11th/chapters/ch13.html"
+                                                                                 },
+                                                                                 {
+                                                                                     "chapter":  14,
+                                                                                     "title":  "Oscillations",
+                                                                                     "file":  "physics/11th/chapters/ch14.html"
+                                                                                 },
+                                                                                 {
+                                                                                     "chapter":  15,
+                                                                                     "title":  "Waves",
+                                                                                     "file":  "physics/11th/chapters/ch15.html"
+                                                                                 }
+                                                                             ]
+                                                            },
+                                                     "12":  {
+                                                                "chapters":  [
+                                                                                 {
+                                                                                     "chapter":  1,
+                                                                                     "title":  "Electric Charges and Fields",
+                                                                                     "file":  "physics/12th/chapters/ch1.html"
+                                                                                 },
+                                                                                 {
+                                                                                     "chapter":  2,
+                                                                                     "title":  "Electrostatic Potential and Capacitance",
+                                                                                     "file":  "physics/12th/chapters/ch2.html"
+                                                                                 },
+                                                                                 {
+                                                                                     "chapter":  3,
+                                                                                     "title":  "Current Electricity",
+                                                                                     "file":  "physics/12th/chapters/ch3.html"
+                                                                                 },
+                                                                                 {
+                                                                                     "chapter":  4,
+                                                                                     "title":  "Moving Charges and Magnetism",
+                                                                                     "file":  "physics/12th/chapters/ch4.html"
+                                                                                 },
+                                                                                 {
+                                                                                     "chapter":  5,
+                                                                                     "title":  "Magnetism and Matter",
+                                                                                     "file":  "physics/12th/chapters/ch5.html"
+                                                                                 },
+                                                                                 {
+                                                                                     "chapter":  6,
+                                                                                     "title":  "Electromagnetic Induction",
+                                                                                     "file":  "physics/12th/chapters/ch6.html"
+                                                                                 },
+                                                                                 {
+                                                                                     "chapter":  7,
+                                                                                     "title":  "Alternating Current",
+                                                                                     "file":  "physics/12th/chapters/ch7.html"
+                                                                                 },
+                                                                                 {
+                                                                                     "chapter":  8,
+                                                                                     "title":  "Electromagnetic Waves",
+                                                                                     "file":  "physics/12th/chapters/ch8.html"
+                                                                                 },
+                                                                                 {
+                                                                                     "chapter":  9,
+                                                                                     "title":  "Ray Optics and Optical Instruments",
+                                                                                     "file":  "physics/12th/chapters/ch9.html"
+                                                                                 },
+                                                                                 {
+                                                                                     "chapter":  10,
+                                                                                     "title":  "Wave Optics",
+                                                                                     "file":  "physics/12th/chapters/ch10.html"
+                                                                                 },
+                                                                                 {
+                                                                                     "chapter":  11,
+                                                                                     "title":  "Dual Nature of Radiation and Matter",
+                                                                                     "file":  "physics/12th/chapters/ch11.html"
+                                                                                 },
+                                                                                 {
+                                                                                     "chapter":  12,
+                                                                                     "title":  "Atoms",
+                                                                                     "file":  "physics/12th/chapters/ch12.html"
+                                                                                 },
+                                                                                 {
+                                                                                     "chapter":  13,
+                                                                                     "title":  "Nuclei",
+                                                                                     "file":  "physics/12th/chapters/ch13.html"
+                                                                                 },
+                                                                                 {
+                                                                                     "chapter":  14,
+                                                                                     "title":  "Semiconductor Electronics",
+                                                                                     "file":  "physics/12th/chapters/ch14.html"
+                                                                                 }
+                                                                             ]
+                                                            }
+                                                 }
+                                 }
                  }
 }
