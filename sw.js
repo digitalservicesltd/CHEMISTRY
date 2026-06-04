@@ -1,4 +1,4 @@
-const CACHE_NAME = 'pfa-study-v2';
+const CACHE_NAME = 'pfa-study-v3';
 const CORE_ASSETS = [
   '/CHEMISTRY/',
   '/CHEMISTRY/index.html',
@@ -60,7 +60,23 @@ self.addEventListener('fetch', event => {
     return;
   }
 
-  // CSS, JS, JSON — cache first, fall back to network
+  // chapters.json — network first (so new chapters show immediately)
+  if (url.pathname.endsWith('chapters.json')) {
+    event.respondWith(
+      fetch(event.request)
+        .then(response => {
+          if (response.ok) {
+            const clone = response.clone();
+            caches.open(CACHE_NAME).then(cache => cache.put(event.request, clone));
+          }
+          return response;
+        })
+        .catch(() => caches.match(event.request))
+    );
+    return;
+  }
+
+  // CSS, JS — cache first, fall back to network
   event.respondWith(
     caches.match(event.request).then(cached => {
       if (cached) {
