@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ch X — CHAPTER_TITLE | PFA Study Portal</title>
+  <!-- =============================================
+    CHAPTER TEMPLATE — PFA Study Platform Engine
+    =============================================
+    INSTRUCTIONS:
+    1. Copy this file to: {subject}/{class}th/chapters/ch{N}.html
+    2. Edit the metadata block below (subject, class, chapter, title)
+    3. Fill in the sections with your content
+    4. Save the file
+    5. Run: .\build-manifest.ps1
+    6. git add . && git commit -m "Add chapter" && git push
+    7. Done! Dashboard, search, navigation update automatically.
+
+    COMPONENTS YOU CAN USE:
+    - <div class="pfa-formula" data-name="NAME" data-formula="FORMULA"></div>
+    - <div class="pfa-mcq" data-correct="a|b|c|d"> ... options ... </div>
+    - <div class="pfa-pyq" data-year="YYYY" data-marks="N"> ... </div>
+    - <div class="pfa-numerical"> ... question ... answer ... </div>
+    - <div class="pfa-warning"> ... common mistake text ... </div>
+    - <div class="pfa-revision"> ... revision point ... </div>
+    - <div class="pfa-summary"> ... summary content ... </div>
+    - <div class="pfa-reaction" data-type="important"> ... reaction ... </div>
+    - <div class="pfa-assertion" data-correct="a|b|c|d"> ... A/R ... </div>
+    - <div class="pfa-notes"> ... notes content ... </div>
+    - <div class="pfa-collapsible" data-title="LABEL"> ... hidden content ... </div>
+  ================================================ -->
+  <link rel="stylesheet" href="../../../css/style.css" />
+  <link rel="manifest" href="../../../manifest.json" />
+  <meta name="theme-color" content="#00bcd4" />
+</head>
+<body data-pfa-page="chapter">
+
+  <!-- ========== CHAPTER METADATA ========== -->
+  <!-- ✏️ EDIT THIS: Set your chapter details -->
+  <script type="application/json" id="chapter-meta">
+  {
+    "subject": "Chemistry",
+    "class": "11",
+    "chapter": 1,
+    "title": "Some Basic Concepts of Chemistry"
+  }
+  </script>
+
+  <div id="pfa-app" class="container fade-in">
+
+    <!-- Auto-generated: breadcrumb, title, completion button -->
+    <div id="pfa-header"></div>
+
+    <!-- Auto-generated: tab navigation (only shows tabs that have content) -->
+    <div id="pfa-tabs"></div>
+
+    <!-- ========================================================
+         SECTION 1: CHAPTER OVERVIEW
+         Add learning objectives, chapter importance, weightage
+         ======================================================== -->
+    <div class="pfa-section" data-section="overview" data-label="📋 Overview">
+      <!-- ✏️ ADD YOUR OVERVIEW HERE -->
+      <!--
+      <h2>Learning Objectives</h2>
+      <ul>
+        <li>Objective 1</li>
+        <li>Objective 2</li>
+      </ul>
+      -->
+    </div>
+
+    <!-- ========================================================
+         SECTION 2: DETAILED NOTES
+         Main theory notes for the chapter
+         ======================================================== -->
+    <div class="pfa-section" data-section="notes" data-label="📝 Notes">
+      <button class="print-btn">🖨️ Print Notes</button>
+      <!-- ✏️ ADD YOUR NOTES HERE -->
+      <!--
+      <h2>1.1 Topic Name</h2>
+      <p>Theory content goes here...</p>
+      <h3>Sub-topic</h3>
+      <p>More detailed content...</p>
+      -->
+    </div>
+
+    <!-- ========================================================
+         SECTION 3: IMPORTANT CONCEPTS
+         Key concepts with highlights
+         ======================================================== -->
+    <div class="pfa-section" data-section="concepts" data-label="💡 Concepts">
+      <!-- ✏️ ADD IMPORTANT CONCEPTS HERE -->
+      <!--
+      <div class="pfa-notes">
+        <h3>Key Concept: Name</h3>
+        <p>Explanation with <span class="key-point">highlighted terms</span>.</p>
+      </div>
+      -->
+    </div>
+
+    <!-- ========================================================
+         SECTION 4: NCERT THEORY
+         Direct NCERT textbook theory
+         ======================================================== -->
+    <div class="pfa-section" data-section="theory" data-label="📖 NCERT Theory">
+      <!-- ✏️ ADD NCERT THEORY HERE -->
+    </div>
+
+    <!-- ========================================================
+         SECTION 5: FORMULA SHEET
+         Use pfa-formula components
+         ======================================================== -->
+    <div class="pfa-section" data-section="formulas" data-label="🔢 Formulas">
+      <div class="formula-grid">
+        <!-- ✏️ ADD FORMULAS HERE -->
+        <!--
+        <div class="pfa-formula" data-name="Formula Name" data-formula="n = m / M"></div>
+        <div class="pfa-formula" data-name="Another Formula" data-formula="PV = nRT"></div>
+        -->
+      </div>
+    </div>
+
+    <!-- ========================================================
+         SECTION 6: IMPORTANT REACTIONS
+         Use pfa-reaction components
+         ======================================================== -->
+    <div class="pfa-section" data-section="reactions" data-label="⚗️ Reactions">
+      <!-- ✏️ ADD REACTIONS HERE -->
+      <!--
+      <div class="pfa-reaction" data-type="important">
+        <div class="reaction-label">Combustion of Methane</div>
+        CH₄ + 2O₂ → CO₂ + 2H₂O
+      </div>
+      -->
+    </div>
+
+    <!-- ========================================================
+         SECTION 7: SOLVED NCERT QUESTIONS
+         In-text questions from NCERT with solutions
+         ======================================================== -->
+    <div class="pfa-section" data-section="ncert-solved" data-label="✅ NCERT Solved">
+      <!-- ✏️ ADD SOLVED QUESTIONS HERE -->
+      <!--
+      <div class="pfa-numerical">
+        <div class="numerical-question"><strong>Q1.</strong> Question text from NCERT...</div>
+        <div class="numerical-answer">Step-by-step solution...</div>
+      </div>
+      -->
+    </div>
+
+    <!-- ========================================================
+         SECTION 8: NCERT BACK EXERCISE SOLUTIONS
+         ======================================================== -->
+    <div class="pfa-section" data-section="ncert-back" data-label="📘 Back Exercise">
+      <!-- ✏️ ADD BACK EXERCISE SOLUTIONS HERE -->
+    </div>
+
+    <!-- ========================================================
+         SECTION 9: PREVIOUS YEAR QUESTIONS (PYQs)
+         Use pfa-pyq components
+         ======================================================== -->
+    <div class="pfa-section" data-section="pyq" data-label="📄 PYQs">
+      <!-- ✏️ ADD PYQs HERE -->
+      <!--
+      <div class="pfa-pyq" data-year="2024" data-marks="3">
+        <p>Previous year question text here...</p>
+      </div>
+      -->
+    </div>
+
+    <!-- ========================================================
+         SECTION 10: MCQs
+         Use pfa-mcq components (interactive with instant feedback)
+         ======================================================== -->
+    <div class="pfa-section" data-section="mcq" data-label="🎯 MCQs">
+      <!-- ✏️ ADD MCQs HERE -->
+      <!--
+      <div class="pfa-mcq" data-correct="b">
+        <div class="mcq-question">What is the SI unit of amount of substance?</div>
+        <div class="pfa-option" data-key="a">Kilogram</div>
+        <div class="pfa-option" data-key="b">Mole</div>
+        <div class="pfa-option" data-key="c">Candela</div>
+        <div class="pfa-option" data-key="d">Ampere</div>
+        <div class="mcq-explanation">The mole is defined as the SI unit for amount of substance.</div>
+      </div>
+      -->
+    </div>
+
+    <!-- ========================================================
+         SECTION 11: ASSERTION-REASON QUESTIONS
+         Use pfa-assertion components
+         ======================================================== -->
+    <div class="pfa-section" data-section="assertion" data-label="⚖️ Assertion-Reason">
+      <!-- ✏️ ADD ASSERTION-REASON QUESTIONS HERE -->
+      <!--
+      <div class="pfa-assertion" data-correct="a">
+        <div class="assertion-text"><strong>Assertion (A):</strong> Text...</div>
+        <div class="reason-text"><strong>Reason (R):</strong> Text...</div>
+        <div class="pfa-option" data-key="a">Both A and R are true and R is the correct explanation of A</div>
+        <div class="pfa-option" data-key="b">Both A and R are true but R is NOT the correct explanation of A</div>
+        <div class="pfa-option" data-key="c">A is true but R is false</div>
+        <div class="pfa-option" data-key="d">A is false but R is true</div>
+      </div>
+      -->
+    </div>
+
+    <!-- ========================================================
+         SECTION 12: NUMERICAL PROBLEMS
+         Use pfa-numerical components
+         ======================================================== -->
+    <div class="pfa-section" data-section="numerical" data-label="🔢 Numericals">
+      <!-- ✏️ ADD NUMERICAL PROBLEMS HERE -->
+      <!--
+      <div class="pfa-numerical">
+        <div class="numerical-question">
+          <strong>Q1.</strong> Calculate the number of moles in 46g of Na.
+        </div>
+        <div class="numerical-answer">
+          n = mass / molar mass = 46 / 23 = 2 moles
+        </div>
+      </div>
+      -->
+    </div>
+
+    <!-- ========================================================
+         SECTION 13: QUICK REVISION NOTES
+         Use pfa-revision components
+         ======================================================== -->
+    <div class="pfa-section" data-section="revision" data-label="🔄 Quick Revision">
+      <!-- ✏️ ADD REVISION NOTES HERE -->
+      <!--
+      <div class="pfa-revision">
+        <strong>Point 1:</strong> Key revision point text...
+      </div>
+      <div class="pfa-revision">
+        <strong>Point 2:</strong> Another revision point...
+      </div>
+      -->
+    </div>
+
+    <!-- ========================================================
+         SECTION 14: COMMON MISTAKES
+         Use pfa-warning components
+         ======================================================== -->
+    <div class="pfa-section" data-section="mistakes" data-label="⚠️ Common Mistakes">
+      <!-- ✏️ ADD COMMON MISTAKES HERE -->
+      <!--
+      <div class="pfa-warning">
+        Students often confuse molarity with molality. Molarity uses volume of solution, molality uses mass of solvent.
+      </div>
+      -->
+    </div>
+
+    <!-- ========================================================
+         SECTION 15: CHAPTER SUMMARY
+         Use pfa-summary components
+         ======================================================== -->
+    <div class="pfa-section" data-section="summary" data-label="📊 Summary">
+      <!-- ✏️ ADD CHAPTER SUMMARY HERE -->
+      <!--
+      <div class="pfa-summary">
+        <h3>Chapter Summary</h3>
+        <ul>
+          <li>Key point 1</li>
+          <li>Key point 2</li>
+          <li>Key point 3</li>
+        </ul>
+      </div>
+      -->
+    </div>
+
+    <!-- ========================================================
+         SECTION 16: PRACTICE TEST
+         Timed MCQ test using pfa-practice-test wrapper
+         ======================================================== -->
+    <div class="pfa-section" data-section="practice" data-label="📝 Practice Test">
+      <!-- ✏️ ADD PRACTICE TEST HERE -->
+      <!--
+      <div class="pfa-practice-test" data-time="15">
+        <div class="pfa-mcq" data-correct="b">
+          <div class="mcq-question">Q1. Test question?</div>
+          <div class="pfa-option" data-key="a">Option A</div>
+          <div class="pfa-option" data-key="b">Option B</div>
+          <div class="pfa-option" data-key="c">Option C</div>
+          <div class="pfa-option" data-key="d">Option D</div>
+        </div>
+      </div>
+      -->
+    </div>
+
+    <!-- Auto-generated: prev/next chapter navigation -->
+    <div id="pfa-nav"></div>
+
+    <!-- Auto-generated: footer -->
+    <div id="pfa-footer"></div>
+  </div>
+
+  <!-- Platform Engine Scripts -->
+  <script src="../../../engine/platform.js"></script>
+  <script src="../../../engine/progress.js"></script>
+  <script src="../../../engine/search.js"></script>
+  <script src="../../../engine/components.js"></script>
+  <script src="../../../js/main.js"></script>
+</body>
+</html>

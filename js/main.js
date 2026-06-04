@@ -1,7 +1,9 @@
 /* ============================================
-   PFA CHEMISTRY PORTAL — main.js
+   PFA STUDY PLATFORM — main.js
+   Thin initialization wrapper
    ============================================ */
 
+/* ---- THEMES ---- */
 const themes = {
   "forest-dark": {
     name: "Forest Dark",
@@ -129,12 +131,10 @@ function applyTheme(themeKey) {
 
 // ---- BUILD THEME POPUP ----
 function buildThemePopup() {
-  // Overlay
   const overlay = document.createElement("div");
   overlay.className = "theme-overlay";
   overlay.id = "themeOverlay";
 
-  // Popup
   const popup = document.createElement("div");
   popup.className = "theme-popup";
 
@@ -172,7 +172,6 @@ function buildThemePopup() {
     grid.appendChild(card);
   });
 
-  // Close handlers
   document.getElementById("themeClose").addEventListener("click", () => {
     overlay.classList.remove("active");
   });
@@ -195,115 +194,51 @@ function buildThemeButton() {
   document.body.appendChild(btn);
 }
 
-// ---- TAB SYSTEM ----
-function initTabs() {
-  const tabBtns = document.querySelectorAll(".tab-btn");
-  const tabPanels = document.querySelectorAll(".tab-panel");
-  if (!tabBtns.length) return;
-
-  const pageKey = "pfa-tab-" + (document.body.dataset.chapter || "default");
-  const saved = localStorage.getItem(pageKey);
-
-  function activateTab(tabId) {
-    tabBtns.forEach(b => b.classList.toggle("active", b.dataset.tab === tabId));
-    tabPanels.forEach(p => {
-      p.classList.toggle("active", p.id === tabId);
-      // For print
-      p.classList.toggle("print-target", p.id === tabId);
-    });
-    localStorage.setItem(pageKey, tabId);
-  }
-
-  tabBtns.forEach(btn => {
-    btn.addEventListener("click", () => activateTab(btn.dataset.tab));
-  });
-
-  // Restore saved or default to first
-  if (saved && document.getElementById(saved)) {
-    activateTab(saved);
-  } else if (tabBtns[0]) {
-    activateTab(tabBtns[0].dataset.tab);
-  }
-}
-
-// ---- SEARCH FILTER ----
-function initSearch() {
-  const input = document.getElementById("chapterSearch");
-  if (!input) return;
-
-  input.addEventListener("input", () => {
-    const query = input.value.toLowerCase().trim();
-    document.querySelectorAll(".chapter-card").forEach(card => {
-      const text = card.textContent.toLowerCase();
-      card.style.display = text.includes(query) ? "" : "none";
-    });
-  });
-}
-
-// ---- STATUS TOGGLE ----
-function initStatusToggles() {
-  document.querySelectorAll(".status-toggle").forEach(btn => {
-    const key = "pfa-status-" + btn.dataset.chapter;
-    const saved = localStorage.getItem(key);
-
-    if (saved) {
-      setStatus(btn, saved === "available");
-    }
-
-    btn.addEventListener("click", (e) => {
-      e.preventDefault();
-      e.stopPropagation();
-      const isAvailable = btn.classList.contains("available");
-      setStatus(btn, !isAvailable);
-      localStorage.setItem(key, !isAvailable ? "available" : "coming-soon");
-    });
-  });
-}
-
-function setStatus(btn, available) {
-  if (available) {
-    btn.className = "status-toggle available";
-    btn.textContent = "✔ Available";
-  } else {
-    btn.className = "status-toggle coming-soon";
-    btn.textContent = "Coming Soon";
-  }
-}
-
-// ---- PRINT ----
-function initPrint() {
-  const btn = document.getElementById("printBtn");
-  if (btn) {
-    btn.addEventListener("click", () => window.print());
-  }
-}
-
 // ---- INIT ----
-document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener("DOMContentLoaded", async () => {
   // Apply saved theme
   const saved = localStorage.getItem("pfa-theme") || "dark-cyber";
   applyTheme(saved);
 
-  // Build UI
+  // Build theme UI
   buildThemeButton();
   buildThemePopup();
 
-  // Features
-  initTabs();
-  initSearch();
-  initStatusToggles();
-  initPrint();
+  // Initialize the platform engine
+  if (window.PFA && window.PFA.autoInit) {
+    await window.PFA.autoInit();
+  }
+
+  // Initialize components (for chapter pages)
+  if (window.PFA && window.PFA.Components) {
+    window.PFA.Components.init();
+    if (window.PFA.Components.renderPYQs) window.PFA.Components.renderPYQs();
+    if (window.PFA.Components.initPracticeTest) window.PFA.Components.initPracticeTest();
+  }
+
+  // Build search index
+  if (window.PFA && window.PFA.Search) {
+    window.PFA.Search.buildIndex();
+    // Index current page content if on a chapter page
+    if (document.body.dataset.pfaPage === 'chapter') {
+      window.PFA.Search.indexCurrentPage();
+    }
+  }
 
   // Entrance fade
   const main = document.querySelector(".fade-in");
   if (main) main.style.opacity = "1";
 });
 
-  if ('serviceWorker' in navigator) {
-    window.addEventListener('load', () => {
-      navigator.serviceWorker
-        .register('/CHEMISTRY/sw.js')
-        .then(reg => console.log('SW registered'))
-        .catch(err => console.log('SW error:', err));
-    });
-  }
+// ---- SERVICE WORKER ----
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', () => {
+    // Detect base path
+    const base = window.location.pathname.match(/^(\/[^/]+\/)/);
+    const swPath = (base ? base[1] : '/') + 'sw.js';
+    navigator.serviceWorker
+      .register(swPath)
+      .then(reg => console.log('SW registered'))
+      .catch(err => console.log('SW error:', err));
+  });
+}

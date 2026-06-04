@@ -1,12 +1,12 @@
 {
-  "name": "PFA Chemistry Portal",
-  "short_name": "PFA Chem",
-  "description": "Class 11 & 12 Chemistry — Potential Finder Academy",
+  "name": "PFA Study Portal",
+  "short_name": "PFA Study",
+  "description": "NCERT Study Platform — Chemistry, Physics, Maths, Biology",
   "start_url": "/CHEMISTRY/",
   "scope": "/CHEMISTRY/",
   "display": "standalone",
   "background_color": "#0a0a0f",
-  "theme_color": "#00b4d8",
+  "theme_color": "#00bcd4",
   "orientation": "portrait",
   "icons": [
     {
