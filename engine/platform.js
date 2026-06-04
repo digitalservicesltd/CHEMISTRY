@@ -9,10 +9,32 @@ window.PFA = PFA;
 /* ---- CONFIGURATION ---- */
 PFA.config = {
   // Auto-detect base path from current URL
+  // On GitHub Pages: /CHEMISTRY/  On local dev: /
+  // Uses the platform.js script src to reliably compute the base
   basePath: (function () {
+    // Find the script tag that loaded platform.js
+    const scripts = document.querySelectorAll('script[src*="platform.js"]');
+    if (scripts.length > 0) {
+      const src = scripts[0].getAttribute('src');
+      // src is like "../../../engine/platform.js" or "engine/platform.js"
+      // Resolve it against the current page URL to get the absolute path
+      const scriptURL = new URL(src, window.location.href);
+      // engine/platform.js is always at {basePath}engine/platform.js
+      const scriptPath = scriptURL.pathname;
+      const engineIdx = scriptPath.indexOf('/engine/platform.js');
+      if (engineIdx !== -1) {
+        return scriptPath.substring(0, engineIdx + 1); // includes trailing /
+      }
+    }
+    // Fallback: check if first segment looks like a GitHub Pages repo
     const path = window.location.pathname;
     const match = path.match(/^(\/[^/]+\/)/);
-    return match ? match[1] : '/';
+    // Known content directories that should NOT be treated as base path
+    const contentDirs = ['chemistry', 'physics', 'maths', 'biology', '11th', '12th'];
+    if (match && !contentDirs.includes(match[1].replace(/\//g, ''))) {
+      return match[1];
+    }
+    return '/';
   })(),
   manifestFile: 'chapters.json',
   subjectMeta: {

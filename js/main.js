@@ -233,9 +233,9 @@ document.addEventListener("DOMContentLoaded", async () => {
 // ---- SERVICE WORKER ----
 if ('serviceWorker' in navigator) {
   window.addEventListener('load', () => {
-    // Detect base path
-    const base = window.location.pathname.match(/^(\/[^/]+\/)/);
-    const swPath = (base ? base[1] : '/') + 'sw.js';
+    // Use PFA's computed base path for correct SW registration
+    const base = (window.PFA && window.PFA.config) ? window.PFA.config.basePath : '/';
+    const swPath = base + 'sw.js';
     navigator.serviceWorker
       .register(swPath)
       .then(reg => console.log('SW registered'))
